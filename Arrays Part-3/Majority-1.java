@@ -1,6 +1,9 @@
 class Solution {
+    
     public int majorityElement(int[] nums) {
         
+        
+        //Moore's Voting Algorithm
         int count=0;
         int ans=0;
         
