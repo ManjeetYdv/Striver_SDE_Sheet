@@ -22,7 +22,7 @@ public class MaxSubarrayWithSum_k {
             if(arr[i]==k && maxLen==0){
                 maxLen =1;
             }
-            if(prefix_sum ==k ){
+            if(prefix_sum ==k ){                             //can be replaced by initialising map.put(0 , -1);
                 maxLen = i+1;
             }
 
