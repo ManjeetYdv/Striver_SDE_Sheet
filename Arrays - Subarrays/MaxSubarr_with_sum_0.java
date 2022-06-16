@@ -9,7 +9,7 @@ class GfG
         int maxLen=0;
         int currLen=0;
 
-        map.put(0 , -1);
+        map.put(0 , -1);                //handles the cases like when prefix_sum=0 , so length will be curr_index -(-1)
 
         for(int i=0 ;i<arr.length ;i++){
             prefix_sum +=arr[i];
