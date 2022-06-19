@@ -10,7 +10,7 @@
  */
 class Solution {
     
-    public int listLength(ListNode head){
+     public int listLength(ListNode head){
         ListNode temp = head;
         int len =0;
         
