@@ -14,6 +14,7 @@ class Solution {
                     pq.add(diff);
                 }
                 else{
+                    //Optimize previous ladder use
                     int br = diff;
 
                     if(pq.size()>0 && pq.peek()<diff){
