@@ -3,7 +3,7 @@ class Solution {
        int low = 0;
         int high = arr.length - 1;
 
-        while (low < high) {
+        while (low <= high) {
 
             int mid = (low + high) / 2;
             
@@ -11,11 +11,11 @@ class Solution {
 
             else if(arr[low]<=arr[mid]) {    //left sub-array is sorted
                 
-                if(arr[low]<=target && arr[mid]>target) high = mid-1;
+                if(arr[low]<=target && arr[mid]>target) high = mid-1;      //element ispresent 
                 else low = mid+1;
             }
             
-            else   {                         //right sub-array
+            else   {                         //right sub-array is sorted 
                 
                 if(arr[high]>=target && arr[mid]<target) low =mid+1;
                 else high = mid-1;
@@ -24,8 +24,7 @@ class Solution {
             }
         }
             
-            return arr[low]==target?low:-1;
-        
+            return -1;
     
 }
     }
