@@ -5,7 +5,7 @@ class Solution
     //railway station such that no train waits.
     static int findPlatform(int arr[], int dep[], int n)
     {
-        Arrays.sort(arr);
+        Arrays.sort(arr);               //we are going to scroll through time 
         Arrays.sort(dep);
 
         int i=1;
