@@ -5,7 +5,7 @@ class Item {
         this.weight = y;
     }
 }
-*/
+
 
 class itemComparator implements Comparator<Item>
 {
