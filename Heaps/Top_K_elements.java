@@ -11,7 +11,7 @@ class Solution {
         for(int num : nums){
             map.put(num,map.getOrDefault(num,0)+1);
         }
-        PriorityQueue<Integer> pq = new PriorityQueue<>((a,b)->(map.get(a)-map.get(b)));      //min heap acc to map's values 
+        PriorityQueue<Integer> pq = new PriorityQueue<>((a,b)->(map.get(a)-map.get(b)));      // this heapify function will sort the queue from min to max and minimum value will be placed at the top
         for(int n : map.keySet()){
             pq.add(n);
             if(pq.size()>k){
