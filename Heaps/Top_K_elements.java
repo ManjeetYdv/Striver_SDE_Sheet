@@ -18,7 +18,7 @@ class Solution {
                 pq.poll();
             }
         }
-        int i = 0;
+         int i = 0;
         int[] result = new int[k];
         while(pq.size()!=0){
             int rem = pq.poll();
