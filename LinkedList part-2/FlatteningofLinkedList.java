@@ -6,7 +6,7 @@ class Node
 	Node next;
 	Node bottom;
 	
-	Node(int d)
+	Node(int d) 
 	{
 		data = d;
 		next = null;
