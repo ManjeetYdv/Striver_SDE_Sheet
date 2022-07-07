@@ -13,16 +13,13 @@ public class Solution {
 
         int[] val=  new int[str.length()];
 
-        for(int i=0 ;i<str.length();i++){
-            val[i]=str.charAt(i)-'A'+1;
-        }
-
+        
         //prefix sum 
         HashMap<Integer , Integer> map = new HashMap<>();
         map.put(-1 , 0);
         int prefixSum=0;
         for(int i=0 ;i<val.length;i++){
-            prefixSum+=val[i];
+            prefixSum+= str.charAt(i)-'A'+1;
             map.put(i ,prefixSum);
         }
 
