@@ -28,7 +28,7 @@ class Solution {
       solve(i - 1, j, a, n, ans, move + 'U');
      }
     
-     a[i][j] = 1;       //all 4 direction failed for so backtracked and marked it 1 to be visited by others
+     a[i][j] = 1;       //all 4 direction searched  ,  so backtracked and marked it 1 to be visited by others
   }
   
     public static ArrayList<String> findPath(int[][] m, int n) {
