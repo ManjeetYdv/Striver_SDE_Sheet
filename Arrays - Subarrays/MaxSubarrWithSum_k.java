@@ -21,11 +21,12 @@ public class maxK {
             prefix_sum +=arr[i];
 
             if(map.containsKey(prefix_sum-k)){
-
-                maxLen = Integer.max(maxLen , i-map.get(prefix_sum-k));
+                 maxLen = Integer.max(maxLen , i-map.get(prefix_sum-k));
             }
             
+            if(!map.contains(preifx_sum)){       //if prefixsum repeats we want only the first occurance index
             map.put(prefix_sum , i);
+            }
 
         }
 
