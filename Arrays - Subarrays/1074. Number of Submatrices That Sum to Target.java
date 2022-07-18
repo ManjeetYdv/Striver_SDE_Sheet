@@ -17,7 +17,7 @@ class Solution {
             for(int c2=c1 ; c2<col ; c2++){
 
                 HashMap<Integer,Integer> map = new HashMap<>();
-                map.put(0,1);      //to handle cases like when prefix sum= target ....then sum-preifx =0  and occurance of 0 is marked as 1 here
+                map.put(0,1);      //to handle cases like when prefix sum= target ....then preifx-target =0  and occurance of 0 is marked as 1 here
                 int sum=0;
 
                 for(int i=0;i<row;i++){
