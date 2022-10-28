@@ -1,33 +1,31 @@
 class Solution {
-  
     public String countAndSay(int n) {
-      
-         if(n==1) return "1";
-
-        String a ="1 ";
-        String b="";
-
-
-        for(int i=2; i<=n ;i++){
-            int k=0;
-
-            for(int j=0 ; j<a.length()-1 ;j++){
-
-                if(a.charAt(j)==a.charAt(j+1)) k++;
-
-                else{
-                    k++;
-                    b+= String.valueOf(k)  +a.charAt(j);
-                    k=0;
-                }
-            }
-            a=b+" ";
-            b="";
-
-
+        if (n ==1) {
+          return "1";
         }
 
-       return a.substring(0, a.length() - 1);  
+        StringBuilder sb = new StringBuilder("1");
+        for (int i = 2; i <= n; i++) {
+            sb = getNextState(sb);
+        }
+        return sb.toString();
+    }
 
+    private StringBuilder getNextState(StringBuilder curSb) {
+        StringBuilder nextSb = new StringBuilder();
+        int len = curSb.length();
+        int i = 0;
+		
+        while (i < len) {
+            char c = curSb.charAt(i++);
+            int count = 1;
+            while (i < len && c == curSb.charAt(i)) {
+                count++;
+                i++;
+            }
+            nextSb.append(count).append(c);
+        }
+		
+        return nextSb;
     }
 }
